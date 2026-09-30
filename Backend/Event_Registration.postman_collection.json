@@ -1,0 +1,375 @@
+{
+  "info": {
+    "_postman_id": "38e91b9c-0129-4930-9a31-cb5a06f06cac",
+    "name": "Event_Registration",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52406381",
+    "_collection_link": "https://go.postman.co/collection/52406381-38e91b9c-0129-4930-9a31-cb5a06f06cac?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "register Copy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"krashan\",\r\n    \"email\":\"gopal@gmail.com\",\r\n    \"password\":\"kras@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:4000/api/auth/signup",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login Copy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"gopal@gmail.com\",\r\n    \"password\":\"kras@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:4000/api/auth/login",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout Copy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:4000/api/auth/logout",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-user Copy",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:4000/api/auth/me",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "auth",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Event",
+      "item": [
+        {
+          "name": "createEvent",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Tech Meetup 2026\",\r\n  \"description\": \"A meetup for developers\",\r\n  \"date\": \"2026-11-15\",\r\n  \"location\": \"Bhopal\",\r\n  \"capacity\": 100\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:4000/api/events/",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "events",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getEvents",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"industry meetup\",\r\n    \"date\":\"11/03/2027\",\r\n    \"location\":\"satna\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:4000/api/events/6abcf90e2a4071aa9abbe0d5",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "events",
+                "6abcf90e2a4071aa9abbe0d5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getEventById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:4000/api/events/6abcf8af2a4071aa9abbe0d3",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "events",
+                "6abcf8af2a4071aa9abbe0d3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getEvent",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Tech Meetup 2026\",\r\n  \"description\": \"A meetup for developers\",\r\n  \"date\": \"2026-11-15\",\r\n  \"location\": \"Bhopal\",\r\n  \"capacity\": 100\r\n}"
+            },
+            "url": {
+              "raw": "localhost:4000/api/events/",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "events",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteEvent",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "localhost:4000/api/events/6abcf90e2a4071aa9abbe0d5",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "events",
+                "6abcf90e2a4071aa9abbe0d5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "registration",
+      "item": [
+        {
+          "name": "regi_confiremed",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Tech Meetup 2026\",\r\n  \"description\": \"A meetup for developers\",\r\n  \"date\": \"2026-11-15\",\r\n  \"location\": \"Bhopal\",\r\n  \"capacity\": 100\r\n}"
+            },
+            "url": {
+              "raw": "localhost:4000/api/registrations/6abcf8af2a4071aa9abbe0d3",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "registrations",
+                "6abcf8af2a4071aa9abbe0d3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll_regis",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Tech Meetup 2026\",\r\n  \"description\": \"A meetup for developers\",\r\n  \"date\": \"2026-11-15\",\r\n  \"location\": \"Bhopal\",\r\n  \"capacity\": 100\r\n}"
+            },
+            "url": {
+              "raw": "localhost:4000/api/registrations/my",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "registrations",
+                "my"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "cancell_regist",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Tech Meetup 2026\",\r\n  \"description\": \"A meetup for developers\",\r\n  \"date\": \"2026-11-15\",\r\n  \"location\": \"Bhopal\",\r\n  \"capacity\": 100\r\n}"
+            },
+            "url": {
+              "raw": "localhost:4000/api/registrations/6abd2e892fe0482292ead929/cancel",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "registrations",
+                "6abd2e892fe0482292ead929",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_register",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Tech Meetup 2026\",\r\n  \"description\": \"A meetup for developers\",\r\n  \"date\": \"2026-11-15\",\r\n  \"location\": \"Bhopal\",\r\n  \"capacity\": 100\r\n}"
+            },
+            "url": {
+              "raw": "localhost:4000/api/registrations/event/6abcf8fc2a4071aa9abbe0d4",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "registrations",
+                "event",
+                "6abcf8fc2a4071aa9abbe0d4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

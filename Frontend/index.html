@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Event Registration System</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+<header>
+  <h1>🎟️ Event Registration System</h1>
+  <div id="userBox"></div>
+</header>
+ 
+<div class="container">
+ 
+  <div id="globalMsg"></div>
+ 
+  <!-- AUTH VIEW -->
+  <div id="authView" class="view">
+    <div class="card" style="max-width:400px;margin:0 auto;">
+      <h2 id="authTitle">Login</h2>
+      <div id="signupNameField" style="display:none;">
+        <label>Name</label>
+        <input id="authName" placeholder="Your name" />
+      </div>
+      <label>Email</label>
+      <input id="authEmail" placeholder="you@example.com" />
+      <label>Password</label>
+      <input id="authPassword" type="password" placeholder="••••••••" />
+      <button class="btn" id="authSubmitBtn" style="width:100%;">Login</button>
+      <div class="auth-toggle" id="authToggleText">
+        Don't have an account? <a id="authToggleLink">Sign up</a>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- MAIN APP VIEW -->
+  <div id="appView" class="view">
+    <div class="tabs">
+      <button data-tab="events" class="tab-btn active">Events</button>
+      <button data-tab="myreg" class="tab-btn">My Registrations</button>
+      <button data-tab="create" class="tab-btn" id="createTabBtn" style="display:none;">Create Event</button>
+    </div>
+ 
+    <!-- Events list -->
+    <div id="tab-events" class="tab-content">
+      <div class="card">
+        <h2>Upcoming Events</h2>
+        <input id="searchBox" placeholder="🔍 Search events by title..." />
+        <div id="eventsList"><small class="hint">Loading events...</small></div>
+      </div>
+    </div>
+ 
+    <!-- My registrations -->
+    <div id="tab-myreg" class="tab-content" style="display:none;">
+      <div class="card">
+        <h2>My Registrations</h2>
+        <div id="myRegList"><small class="hint">Loading...</small></div>
+      </div>
+    </div>
+ 
+    <!-- Create event (organizer only) -->
+    <div id="tab-create" class="tab-content" style="display:none;">
+      <div class="card">
+        <h2>Create New Event</h2>
+        <label>Title</label>
+        <input id="evTitle" placeholder="Tech Meetup 2026" />
+        <label>Description</label>
+        <textarea id="evDesc" rows="3" placeholder="Event details..."></textarea>
+        <label>Date</label>
+        <input id="evDate" type="date" />
+        <label>Location</label>
+        <input id="evLocation" placeholder="Bhopal" />
+        <label>Capacity (0 = unlimited)</label>
+        <input id="evCapacity" type="number" value="0" />
+        <button class="btn" id="createEventBtn">Create Event</button>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+ 
